@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mugo.com.tr</title>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/myStyle.css">
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+    <script src="scripts/products.js"></script>
+    
+    
+  </head>
+  <body>
+    <header>
+      <a id="logolink" href="#"><img src="images/image_180.webp" alt=""></a>
+      <ul>
+        <!-- <li><a href="">Kadın</a></li> -->
+         <!-- <li>Erkek</li>  -->
+         <div class="navbar">
+          <div class="dropdown">
+          <button class="dropbtn">Kadın
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Ayakkabı </a>
+            <a href="#">Çanta</a>
+            <a href="#">Aksesuar</a>
+            <a href="#">Giyim</a>
+
+          </div>
+        </div> 
+         <div class="navbar">
+            <div class="dropdown">
+            <button class="dropbtn">Erkek 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Ayakkabı </a>
+              <a href="#">Çanta</a>
+              <a href="#">Aksesuar</a>
+              <a href="#">Giyim</a>
+
+            </div>
+          </div> 
+        </div>
+        <div class="navbar">
+          <div class="dropdown">
+          <button class="dropbtn">Çocuk
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">            
+            <a href="#">Çanta</a>
+            <a href="#">Aksesuar</a>
+            <a href="#">Giyim</a>
+
+          </div>
+        </div> 
+        <div class="navbar">
+          <div class="dropdown">
+          <button class="dropbtn">Yaşam
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Ofis ve Kırtasiye</a>
+            <a href="#">Teknoloji</a>
+            <a href="#">Ev ve Dekorasyon</a>
+            
+
+          </div>
+        </div> 
+
+        <div class="navbar">
+          <div class="dropdown">
+          <button class="dropbtn">Özel Seriler
+            <i class="fa fa-caret-down"></i>
+          </button>
+            <div class="dropdown-content">
+            <a href="#">Ayakkabı</a>
+            <a href="#">Çanta</a>
+            <a href="#">Aksesuar</a>
+            <a href="#">Giyim</a>
+
+           </div>
+          </div>      
+        </div>
+    
+        <li>Markalar</li>
+        <li>Indirim</li>
+        <li></li>
+      </ul>
+      <div id="headerRight">
+        <a href=""><i class="fa fa-user"></i></a>
+        <i class="fa fa-search"></i>
+      </div>
+    </header>
+    
+    <section class="top">
+      <div>
+        <div id="left"></div>
+        <div id="right"></div>      
+      </div>
+      <div id="kesfet">KEŞFET</div>
+      <div>
+        <div id="left1"></div>
+        <div id="right1"></div>        
+      </div>
+      <div id="kesfet">KEŞFET</div>
+    </section>
+    <section class="products">
+      <h1>Yeni Ürünler</h1>
+      <div class="items">
+                  
+      </div>
+    </section>
+    <section class="bottom">
+      <div>
+        <div id="left"></div>
+        <div id="right"></div>      
+      </div>
+      <div id="kesfet">KEŞFET</div>
+      <div>
+        <div id="left1"></div>
+        <div id="right1"></div>        
+      </div>
+      <div id="kesfet">KEŞFET</div>
+    </section>
+  </body>
+</html>
+<script>
+  $(function(){
+    for(i=0; i<products.length; i++){
+      var product = products[i];
+      out = `
+      <div class="item">
+          <img src="${product.images[0]}" />
+          <h1>${product.name}</h3>
+          <h2>${product.categories}</h4>
+          <h2>	&#36; ${product.price}</h4>
+        </div>   
+      `;
+      $(".items").append(out);
+    }
+  });
+</script>
